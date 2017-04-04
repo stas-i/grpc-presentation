@@ -15,7 +15,7 @@ namespace GrpcSample.Server.Services
             //return base.GetHelloWorld(request, context);
             var response = new HelleWorldResponse
             {
-                //DateTimeProperty = Timestamp.FromDateTime(DateTime.Now), // Exception
+                DateTimeProperty = Timestamp.FromDateTime(DateTime.Now), // Exception
                 Message = "Hello Oxagile",
                 NullableInt = null
             };
