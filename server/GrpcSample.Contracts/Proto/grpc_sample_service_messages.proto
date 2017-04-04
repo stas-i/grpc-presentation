@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package grpcsample;
+
+option csharp_namespace = "GrpcSample.Contracts.Messages";
+
+message GetLinesRequest {
+	string file_path = 1;
+	int32 number_of_lines_to_read = 2;
+}
+
+message Line {
+	string text_line = 1;
+}
+
+message NumberMessage {
+	int32 number = 1;
+}
+
+message SumResponse {
+	int64 sum = 1;
+	int32 numbers_count = 2;
+}
+
+message MultiplyRequest {
+	float first_number = 1;
+	float second_number = 2;
+}
+
+message MultiplyResponse {
+	double multiply_result = 1;
+	MultiplyRequest request = 2;
+}
