@@ -14,9 +14,9 @@ namespace GrpcSample.Client.Services
 
         private DateTime DefaultDeadline => DateTime.UtcNow.AddSeconds(60);
 
-        public SampleServiceClientDemoService()
+        public SampleServiceClientDemoService(IChannelFactory channelFactory, string host)
         {
-            var channel = new Channel("127.0.0.1:50077", ChannelCredentials.Insecure);
+            var channel = channelFactory.GetChannel(host);
             _client = new GrpcSampleService.GrpcSampleServiceClient(channel);
         }
 
