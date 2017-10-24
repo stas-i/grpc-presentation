@@ -6,22 +6,38 @@ using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using GrpcSample.Contracts.Messages;
 using GrpcSample.Contracts.Services;
+using GrpcSample.Server.Services.Infrastructure;
+using GrpcSample.Server.Services.Query;
 
 namespace GrpcSample.Server.Services
 {
     public class GrpcSampleServiceImpl : GrpcSampleService.GrpcSampleServiceBase
     {
-        public override Task<HelleWorldResponse> GetHelloWorld(Empty request, ServerCallContext context)
+        private readonly IMediatorExecutor _mediatorExecutor;
+
+        public GrpcSampleServiceImpl(IMediatorExecutor mediatorExecutor)
         {
-            //return base.GetHelloWorld(request, context);
+            _mediatorExecutor = mediatorExecutor;
+        }
+
+        public override async Task<HelleWorldResponse> GetHelloWorld(GetHelloWorldRequest request, ServerCallContext context)
+        {
+            var query = new GetDataRequest
+            {
+                Id = request.Id
+            };
+            
+            var result = await _mediatorExecutor.ExecuteAsync(query).ConfigureAwait(false);
+            
             var response = new HelleWorldResponse
             {
-                DateTimeProperty = Timestamp.FromDateTime(DateTime.Now), // Exception
-                Message = "Hello Oxagile",
-                NullableInt = null
+                DateTimeProperty = Timestamp.FromDateTime(DateTime.UtcNow), // Exception if use DateTime.Now
+                //Message = "Hello Oxagile",
+                NullableInt = null,
+                Message = $"Hello world! {result.Data}"
             };
 
-            return Task.FromResult(response);
+            return response;
         }
 
         public override async Task GetLines(GetLinesRequest request, IServerStreamWriter<Line> responseStream, ServerCallContext context)

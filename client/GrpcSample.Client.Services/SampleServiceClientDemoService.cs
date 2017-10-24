@@ -22,15 +22,15 @@ namespace GrpcSample.Client.Services
 
         public async Task DemoAllAsync()
         {
-            //await DemoHelloWorld().ConfigureAwait(false);
-            //await DemoGetLines().ConfigureAwait(false);
-            //await DemoSum().ConfigureAwait(false);
+            await DemoHelloWorld().ConfigureAwait(false);
+            await DemoGetLines().ConfigureAwait(false);
+            await DemoSum().ConfigureAwait(false);
             await DemoMultiply().ConfigureAwait(false);
         }
 
         private async Task DemoHelloWorld()
         {
-            var request = new Google.Protobuf.WellKnownTypes.Empty();
+            var request = new GetHelloWorldRequest{ Id = "hello world" };
             var response = await _client.GetHelloWorldAsync(request, deadline: DefaultDeadline);
             Console.WriteLine(response);
         }
@@ -40,7 +40,7 @@ namespace GrpcSample.Client.Services
             var request = new GetLinesRequest
             {
                 FilePath = @"D:\test-doc.txt",
-                NumberOfLinesToRead = 10000
+                NumberOfLinesToRead = 1000
             };
 
             using (var call = _client.GetLines(request))
@@ -56,7 +56,7 @@ namespace GrpcSample.Client.Services
 
         private async Task DemoSum()
         {
-            var list = Enumerable.Range(1, 500000);
+            var list = Enumerable.Range(1, 5000);
 
             using (var call = _client.Sum())
             {
@@ -81,7 +81,7 @@ namespace GrpcSample.Client.Services
             {
                 var readTask = ReadAsync(call);
 
-                for (int i = 0, j = 0; i < 100000; i++, j++)
+                for (int i = 0, j = 0; i < 1000; i++, j++)
                 {
                     var request = new MultiplyRequest
                     {

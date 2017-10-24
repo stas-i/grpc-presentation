@@ -2,6 +2,10 @@
 using System.Threading;
 using Grpc.Core.Logging;
 using GrpcSample.Server.Services;
+using GrpcSample.Server.Services.Infrastructure;
+using GrpcSample.Server.Services.Services;
+using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace GrpcSample.Server
 {
@@ -9,6 +13,12 @@ namespace GrpcSample.Server
     {
         static void Main(string[] args)
         {
+            var serviceCollection = new ServiceCollection();
+            serviceCollection.AddScoped<IDataService, DataService>();
+            serviceCollection.AddMediatR();
+            serviceCollection.AddScoped<IMediatorExecutor, MediatorExecutor>();
+            var provider = serviceCollection.BuildServiceProvider();
+            
             const int port = 50077;
 
             GrpcEnvironment.SetLogger(new LogLevelFilterLogger(new ConsoleLogger(), LogLevel.Debug));
@@ -18,7 +28,7 @@ namespace GrpcSample.Server
             {
                 Services =
                 {
-                    GrpcSample.Contracts.Services.GrpcSampleService.BindService(new GrpcSampleServiceImpl()),
+                    Contracts.Services.GrpcSampleService.BindService(new GrpcSampleServiceImpl(provider.GetService<IMediatorExecutor>())),
                     // Bind any other services to implementation
                 },
                 Ports =

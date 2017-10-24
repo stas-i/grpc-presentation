@@ -1,8 +1,8 @@
 @rem enter this directory
 cd /d %~dp0
 
-SET GRPC_TOOLS=%USERPROFILE%\.nuget\packages\Grpc.Tools\1.2.0\tools\windows_x64\
-SET PROTOBUF_TOOLS=%USERPROFILE%\.nuget\packages\Google.Protobuf.Tools\3.2.0\tools
+SET GRPC_TOOLS=%USERPROFILE%\.nuget\packages\Grpc.Tools\1.6.1\tools\windows_x64\
+SET PROTOBUF_TOOLS=%USERPROFILE%\.nuget\packages\Google.Protobuf.Tools\3.4.0\tools
 
 SET IN=Proto
 SET OUTPUT=Proto

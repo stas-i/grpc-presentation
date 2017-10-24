@@ -25,31 +25,148 @@ namespace GrpcSample.Contracts.Services {
             "ChlncnBjX3NhbXBsZV9zZXJ2aWNlLnByb3RvEgpncnBjc2FtcGxlGiJncnBj",
             "X3NhbXBsZV9zZXJ2aWNlX21lc3NhZ2VzLnByb3RvGh5nb29nbGUvcHJvdG9i",
             "dWYvd3JhcHBlcnMucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90byKaAgoSSGVsbGVX",
-            "b3JsZFJlc3BvbnNlEjEKDG51bGxhYmxlX2ludBgBIAEoCzIbLmdvb2dsZS5w",
-            "cm90b2J1Zi5JbnQ2NFZhbHVlEjYKEmRhdGVfdGltZV9wcm9wZXJ0eRgDIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDwoHbWVzc2FnZRgEIAEo",
-            "CRI1Cglmb29fZmllbGQYBSABKA4yIi5ncnBjc2FtcGxlLkhlbGxlV29ybGRS",
-            "ZXNwb25zZS5Gb28iNQoDRm9vEgsKB1VOS05PV04QABIPCgtGSVJTVF9WQUxV",
-            "RRACEhAKDFNFQ09ORF9WQUxVRRADSgQIAhADSgQIDxAQSgQICRAMUgNmb29S",
-            "A2JhcjKpAgoRR3JwY1NhbXBsZVNlcnZpY2USSQoNR2V0SGVsbG9Xb3JsZBIW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eRoeLmdycGNzYW1wbGUuSGVsbGVXb3Js",
-            "ZFJlc3BvbnNlIgASPQoIR2V0TGluZXMSGy5ncnBjc2FtcGxlLkdldExpbmVz",
-            "UmVxdWVzdBoQLmdycGNzYW1wbGUuTGluZSIAMAESPQoDU3VtEhkuZ3JwY3Nh",
-            "bXBsZS5OdW1iZXJNZXNzYWdlGhcuZ3JwY3NhbXBsZS5TdW1SZXNwb25zZSIA",
-            "KAESSwoITXVsdGlwbHkSGy5ncnBjc2FtcGxlLk11bHRpcGx5UmVxdWVzdBoc",
-            "LmdycGNzYW1wbGUuTXVsdGlwbHlSZXNwb25zZSIAKAEwAUIgqgIdR3JwY1Nh",
-            "bXBsZS5Db250cmFjdHMuU2VydmljZXNiBnByb3RvMw=="));
+            "cHJvdG8iIgoUR2V0SGVsbG9Xb3JsZFJlcXVlc3QSCgoCaWQYASABKAki4wEK",
+            "EkhlbGxlV29ybGRSZXNwb25zZRIxCgxudWxsYWJsZV9pbnQYASABKAsyGy5n",
+            "b29nbGUucHJvdG9idWYuSW50MzJWYWx1ZRI2ChJkYXRlX3RpbWVfcHJvcGVy",
+            "dHkYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg8KB21lc3Nh",
+            "Z2UYCCABKAkiNQoDQmFyEgsKB1VOS05PV04QABIPCgtGSVJTVF9WQUxVRRAB",
+            "EhAKDFNFQ09ORF9WQUxVRRACSgQIAhADSgQIDxAQSgQICRAMUgNmb29SA2Jh",
+            "cjKzAgoRR3JwY1NhbXBsZVNlcnZpY2USUwoNR2V0SGVsbG9Xb3JsZBIgLmdy",
+            "cGNzYW1wbGUuR2V0SGVsbG9Xb3JsZFJlcXVlc3QaHi5ncnBjc2FtcGxlLkhl",
+            "bGxlV29ybGRSZXNwb25zZSIAEj0KCEdldExpbmVzEhsuZ3JwY3NhbXBsZS5H",
+            "ZXRMaW5lc1JlcXVlc3QaEC5ncnBjc2FtcGxlLkxpbmUiADABEj0KA1N1bRIZ",
+            "LmdycGNzYW1wbGUuTnVtYmVyTWVzc2FnZRoXLmdycGNzYW1wbGUuU3VtUmVz",
+            "cG9uc2UiACgBEksKCE11bHRpcGx5EhsuZ3JwY3NhbXBsZS5NdWx0aXBseVJl",
+            "cXVlc3QaHC5ncnBjc2FtcGxlLk11bHRpcGx5UmVzcG9uc2UiACgBMAFCIKoC",
+            "HUdycGNTYW1wbGUuQ29udHJhY3RzLlNlcnZpY2VzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::GrpcSample.Contracts.Messages.GrpcSampleServiceMessagesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::GrpcSample.Contracts.Messages.GrpcSampleServiceMessagesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcSample.Contracts.Services.HelleWorldResponse), global::GrpcSample.Contracts.Services.HelleWorldResponse.Parser, new[]{ "NullableInt", "DateTimeProperty", "Message", "FooField" }, null, new[]{ typeof(global::GrpcSample.Contracts.Services.HelleWorldResponse.Types.Foo) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcSample.Contracts.Services.GetHelloWorldRequest), global::GrpcSample.Contracts.Services.GetHelloWorldRequest.Parser, new[]{ "Id" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcSample.Contracts.Services.HelleWorldResponse), global::GrpcSample.Contracts.Services.HelleWorldResponse.Parser, new[]{ "NullableInt", "DateTimeProperty", "Message" }, null, new[]{ typeof(global::GrpcSample.Contracts.Services.HelleWorldResponse.Types.Bar) }, null)
           }));
     }
     #endregion
 
   }
   #region Messages
+  public sealed partial class GetHelloWorldRequest : pb::IMessage<GetHelloWorldRequest> {
+    private static readonly pb::MessageParser<GetHelloWorldRequest> _parser = new pb::MessageParser<GetHelloWorldRequest>(() => new GetHelloWorldRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetHelloWorldRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcSample.Contracts.Services.GrpcSampleServiceReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetHelloWorldRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetHelloWorldRequest(GetHelloWorldRequest other) : this() {
+      id_ = other.id_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetHelloWorldRequest Clone() {
+      return new GetHelloWorldRequest(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetHelloWorldRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetHelloWorldRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetHelloWorldRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   /// <summary>
   /// Hello World example message.
   ///
@@ -62,7 +179,7 @@ namespace GrpcSample.Contracts.Services {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcSample.Contracts.Services.GrpcSampleServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::GrpcSample.Contracts.Services.GrpcSampleServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -82,7 +199,6 @@ namespace GrpcSample.Contracts.Services {
       NullableInt = other.NullableInt;
       DateTimeProperty = other.dateTimeProperty_ != null ? other.DateTimeProperty.Clone() : null;
       message_ = other.message_;
-      fooField_ = other.fooField_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -92,13 +208,13 @@ namespace GrpcSample.Contracts.Services {
 
     /// <summary>Field number for the "nullable_int" field.</summary>
     public const int NullableIntFieldNumber = 1;
-    private static readonly pb::FieldCodec<long?> _single_nullableInt_codec = pb::FieldCodec.ForStructWrapper<long>(10);
-    private long? nullableInt_;
+    private static readonly pb::FieldCodec<int?> _single_nullableInt_codec = pb::FieldCodec.ForStructWrapper<int>(10);
+    private int? nullableInt_;
     /// <summary>
     /// snake_case used form message properties.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long? NullableInt {
+    public int? NullableInt {
       get { return nullableInt_; }
       set {
         nullableInt_ = value;
@@ -120,27 +236,13 @@ namespace GrpcSample.Contracts.Services {
     }
 
     /// <summary>Field number for the "message" field.</summary>
-    public const int MessageFieldNumber = 4;
+    public const int MessageFieldNumber = 8;
     private string message_ = "";
-    /// <summary>
-    ///// ERROR!!!
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Message {
       get { return message_; }
       set {
         message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "foo_field" field.</summary>
-    public const int FooFieldFieldNumber = 5;
-    private global::GrpcSample.Contracts.Services.HelleWorldResponse.Types.Foo fooField_ = 0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::GrpcSample.Contracts.Services.HelleWorldResponse.Types.Foo FooField {
-      get { return fooField_; }
-      set {
-        fooField_ = value;
       }
     }
 
@@ -160,7 +262,6 @@ namespace GrpcSample.Contracts.Services {
       if (NullableInt != other.NullableInt) return false;
       if (!object.Equals(DateTimeProperty, other.DateTimeProperty)) return false;
       if (Message != other.Message) return false;
-      if (FooField != other.FooField) return false;
       return true;
     }
 
@@ -170,7 +271,6 @@ namespace GrpcSample.Contracts.Services {
       if (nullableInt_ != null) hash ^= NullableInt.GetHashCode();
       if (dateTimeProperty_ != null) hash ^= DateTimeProperty.GetHashCode();
       if (Message.Length != 0) hash ^= Message.GetHashCode();
-      if (FooField != 0) hash ^= FooField.GetHashCode();
       return hash;
     }
 
@@ -189,12 +289,8 @@ namespace GrpcSample.Contracts.Services {
         output.WriteMessage(DateTimeProperty);
       }
       if (Message.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(66);
         output.WriteString(Message);
-      }
-      if (FooField != 0) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) FooField);
       }
     }
 
@@ -210,9 +306,6 @@ namespace GrpcSample.Contracts.Services {
       if (Message.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
-      if (FooField != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FooField);
-      }
       return size;
     }
 
@@ -222,7 +315,7 @@ namespace GrpcSample.Contracts.Services {
         return;
       }
       if (other.nullableInt_ != null) {
-        if (nullableInt_ == null || other.NullableInt != 0L) {
+        if (nullableInt_ == null || other.NullableInt != 0) {
           NullableInt = other.NullableInt;
         }
       }
@@ -235,9 +328,6 @@ namespace GrpcSample.Contracts.Services {
       if (other.Message.Length != 0) {
         Message = other.Message;
       }
-      if (other.FooField != 0) {
-        FooField = other.FooField;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -249,8 +339,8 @@ namespace GrpcSample.Contracts.Services {
             input.SkipLastField();
             break;
           case 10: {
-            long? value = _single_nullableInt_codec.Read(input);
-            if (nullableInt_ == null || value != 0L) {
+            int? value = _single_nullableInt_codec.Read(input);
+            if (nullableInt_ == null || value != 0) {
               NullableInt = value;
             }
             break;
@@ -262,12 +352,8 @@ namespace GrpcSample.Contracts.Services {
             input.ReadMessage(dateTimeProperty_);
             break;
           }
-          case 34: {
+          case 66: {
             Message = input.ReadString();
-            break;
-          }
-          case 40: {
-            fooField_ = (global::GrpcSample.Contracts.Services.HelleWorldResponse.Types.Foo) input.ReadEnum();
             break;
           }
         }
@@ -278,16 +364,10 @@ namespace GrpcSample.Contracts.Services {
     /// <summary>Container for nested types declared in the HelleWorldResponse message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      /// <summary>
-      /// SCREAMING_SNAKE_CASE used for enums.
-      /// </summary>
-      public enum Foo {
-        /// <summary>
-        ///// ERROR!!!
-        /// </summary>
+      public enum Bar {
         [pbr::OriginalName("UNKNOWN")] Unknown = 0,
-        [pbr::OriginalName("FIRST_VALUE")] FirstValue = 2,
-        [pbr::OriginalName("SECOND_VALUE")] SecondValue = 3,
+        [pbr::OriginalName("FIRST_VALUE")] FirstValue = 1,
+        [pbr::OriginalName("SECOND_VALUE")] SecondValue = 2,
       }
 
     }
